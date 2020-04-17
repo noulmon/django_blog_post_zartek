@@ -1,5 +1,6 @@
 from django.db import models
 from django.utils.translation import ugettext_lazy as _
+from taggit.managers import TaggableManager
 from vote.models import VoteModel
 
 from user.models import User
@@ -8,6 +9,7 @@ from user.models import User
 class Post(VoteModel, models.Model):
     title = models.CharField(max_length=25, blank=False, null=False)
     description = models.TextField(blank=False, null=False)
+    tags = TaggableManager()
     created_by = models.ForeignKey(User, blank=False, null=False, on_delete=models.CASCADE)
     created_at = models.DateTimeField(auto_now_add=True)
 

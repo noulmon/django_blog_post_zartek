@@ -14,13 +14,13 @@ class PostAdmin(admin.ModelAdmin):
     inlines = [PostImageInline]
 
     fieldsets = (
-        (None, {'fields': ('title', 'description', 'created_by', )}),
+        (None, {'fields': ('title', 'description', 'tags', 'created_by',)}),
     )
 
     add_fieldsets = (
         (None, {
             'classes': ('wide',),
-            'fields': ('title', 'description', 'created_by')}
+            'fields': ('title', 'description', 'tags', 'created_by')}
          ),
     )
 

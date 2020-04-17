@@ -1,10 +1,9 @@
 from rest_framework import serializers
 
-from django_blog_post_zartek.settings import MEDIA_ROOT, MEDIA_URL
-from post.models import Post, PostImage
+from django_blog_post_zartek.settings import MEDIA_URL
+from post.models import PostImage
 from user.models import User
 from user.serializers import UserSerializer
-from datetime import datetime
 
 
 class PostSerializer(serializers.Serializer):
@@ -13,6 +12,8 @@ class PostSerializer(serializers.Serializer):
     description = serializers.CharField()
     created_by = serializers.CharField()
     created_at = serializers.DateTimeField(format="%Y-%m-%d %H:%M:%S")
+    # post tags
+    tags = serializers.SerializerMethodField()
     # images in the post
     images = serializers.SerializerMethodField()
     # number of likes the post have
@@ -29,8 +30,8 @@ class PostSerializer(serializers.Serializer):
         '''
         if PostImage.objects.filter(post=post).exists():
             post_images = PostImage.objects.filter(post=post).values_list('image')
-            return [MEDIA_URL+image[0] for image in post_images]
-        return None
+            return [MEDIA_URL + image[0] for image in post_images]
+        return []
 
     def get_likes_no(self, post):
         '''
@@ -41,7 +42,7 @@ class PostSerializer(serializers.Serializer):
         # checking if the user is admin
         if user.is_staff:
             return post.votes.count()
-        return ''
+        return None
 
     def get_liked_users(self, post):
         '''
@@ -55,7 +56,7 @@ class PostSerializer(serializers.Serializer):
             if len(users) > 0:
                 user_ids = [i[0] for i in users]
                 return User.objects.filter(id__in=user_ids).values_list('username')
-        return ''
+        return []
 
     def get_is_liked(self, post):
         '''
@@ -64,6 +65,12 @@ class PostSerializer(serializers.Serializer):
         '''
         user = self.context.get('user')
         return post.votes.exists(user.id)
+
+    def get_tags(self, post):
+        if post.tags.exists():
+            tag_queryset = post.tags.values_list('name')
+            return [i[0] for i in tag_queryset]
+        return []
 
 
 class PostImageSerializer(serializers.Serializer):
