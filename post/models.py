@@ -6,10 +6,10 @@ from user.models import User
 
 
 class Post(VoteModel, models.Model):
-    title = models.CharField(max_length=15, blank=False, null=False)
+    title = models.CharField(max_length=25, blank=False, null=False)
     description = models.TextField(blank=False, null=False)
     created_by = models.ForeignKey(User, blank=False, null=False, on_delete=models.CASCADE)
-    created_at = models.DateTimeField(null=False, blank=False)
+    created_at = models.DateTimeField(auto_now_add=True)
 
     class Meta:
         db_table = 'POST'
@@ -18,3 +18,13 @@ class Post(VoteModel, models.Model):
 
     def __str__(self):
         return "{}".format(self.title)
+
+
+class PostImage(models.Model):
+    post = models.ForeignKey(Post, null=False, blank=False, on_delete=models.CASCADE)
+    image = models.ImageField(null=False, blank=False, upload_to='images/post_images/')
+
+    class Meta:
+        db_table = 'POST_IMAGE'
+        verbose_name = _('post_image')
+        verbose_name_plural = _('post_images')
