@@ -24,6 +24,10 @@ The _admin user_ has the privilege to view the list of all users who have liked 
     ```python manage.py runserver```
     
     If the steps are followed correctly, you're server will be up and running.
+ 
+ 4. To gather all static files:
+   
+    ```python manage.py collectstatic```
 
  4. To log into admin panel, we have to create a superuser:
  
