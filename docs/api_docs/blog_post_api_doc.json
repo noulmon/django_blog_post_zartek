@@ -1,0 +1,764 @@
+{
+	"info": {
+		"_postman_id": "c43cb7e4-8fc5-4694-8e0b-a1c34db8cbb3",
+		"name": "BlogPost_Zartek",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Post",
+			"item": [
+				{
+					"name": "List",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token  9f7149afbb87d2f9d6cbc4ebfac8922629c1d677",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/post/all/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"post",
+								"all",
+								""
+							]
+						},
+						"description": "List API return the list of all posts based on the posts liked by the user.\n\nNote: Please add the 'user token' as the 'Autherization Header' "
+					},
+					"response": [
+						{
+							"name": "Success response",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Token  9f7149afbb87d2f9d6cbc4ebfac8922629c1d677",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://127.0.0.1:8000/post/all/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"post",
+										"all",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Fri, 17 Apr 2020 21:24:06 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.7.5"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "5489"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"return\": true,\n    \"message\": \"Post list fetched successfully\",\n    \"posts\": [\n        {\n            \"id\": 6,\n            \"title\": \"Test Title 1\",\n            \"description\": \"Lorem ipsum dolor sit amet, cras purus ridiculus morbi, nunc at nam et fermentum nam, posuere suspendisse in nulla aliquam, etiam laudantium fermentum. Quisque nunc luctus sit, tincidunt at sed lectus luctus, integer at, ipsum fusce sit id luctus dolor in.\",\n            \"created_by\": \"root\",\n            \"created_at\": \"2020-04-17 20:17:08\",\n            \"tags\": [\n                \"tag_1\",\n                \"tag_2\",\n                \"tag_3\"\n            ],\n            \"images\": [\n                \"/media/images/post_images/buddha_buddhism_meditation_147451_1920x1080_qiXuzUp.jpg\",\n                \"/media/images/post_images/light_bulb_drawing_vector_130581_1920x1080_dvFJ187.jpg\"\n            ],\n            \"likes_no\": null,\n            \"liked_users\": [],\n            \"is_liked\": false\n        },\n        {\n            \"id\": 12,\n            \"title\": \"Test Title 7\",\n            \"description\": \"Lorem ipsum dolor sit amet, cras purus ridiculus morbi, nunc at nam et fermentum nam, posuere suspendisse in nulla aliquam, etiam laudantium fermentum. Quisque nunc luctus sit, tincidunt at sed lectus luctus, integer at, ipsum fusce sit id luctus dolor in.\",\n            \"created_by\": \"root\",\n            \"created_at\": \"2020-04-17 20:21:41\",\n            \"tags\": [\n                \"tag_1\",\n                \"tag_4\"\n            ],\n            \"images\": [\n                \"/media/images/post_images/inscription_lighting_neon_118059_1920x1080_qxMplMk.jpg\"\n            ],\n            \"likes_no\": null,\n            \"liked_users\": [],\n            \"is_liked\": false\n        },\n        {\n            \"id\": 8,\n            \"title\": \"Test Title 3\",\n            \"description\": \"Lorem ipsum dolor sit amet, cras purus ridiculus morbi, nunc at nam et fermentum nam, posuere suspendisse in nulla aliquam, etiam laudantium fermentum. Quisque nunc luctus sit, tincidunt at sed lectus luctus, integer at, ipsum fusce sit id luctus dolor in.\",\n            \"created_by\": \"root\",\n            \"created_at\": \"2020-04-17 20:19:01\",\n            \"tags\": [\n                \"tag_2\",\n                \"tag_3\",\n                \"tag_5\"\n            ],\n            \"images\": [\n                \"/media/images/post_images/inscription_lighting_neon_118059_1920x1080_AcDdT7h.jpg\"\n            ],\n            \"likes_no\": null,\n            \"liked_users\": [],\n            \"is_liked\": false\n        },\n        {\n            \"id\": 10,\n            \"title\": \"Test Title 5\",\n            \"description\": \"Lorem ipsum dolor sit amet, cras purus ridiculus morbi, nunc at nam et fermentum nam, posuere suspendisse in nulla aliquam, etiam laudantium fermentum. Quisque nunc luctus sit, tincidunt at sed lectus luctus, integer at, ipsum fusce sit id luctus dolor in.\",\n            \"created_by\": \"root\",\n            \"created_at\": \"2020-04-17 20:20:11\",\n            \"tags\": [\n                \"tag_2\",\n                \"tag_5\"\n            ],\n            \"images\": [\n                \"/media/images/post_images/mr_robot_2015_rami_malek_numbers_104267_1920x1080_hrbHsqd.jpg\"\n            ],\n            \"likes_no\": null,\n            \"liked_users\": [],\n            \"is_liked\": false\n        },\n        {\n            \"id\": 11,\n            \"title\": \"Test Title 6\",\n            \"description\": \"Lorem ipsum dolor sit amet, cras purus ridiculus morbi, nunc at nam et fermentum nam, posuere suspendisse in nulla aliquam, etiam laudantium fermentum. Quisque nunc luctus sit, tincidunt at sed lectus luctus, integer at, ipsum fusce sit id luctus dolor in.\",\n            \"created_by\": \"root\",\n            \"created_at\": \"2020-04-17 20:21:04\",\n            \"tags\": [\n                \"tag_4\",\n                \"tag_6\"\n            ],\n            \"images\": [\n                \"/media/images/post_images/inscription_lighting_neon_118059_1920x1080_scN8cXy.jpg\"\n            ],\n            \"likes_no\": null,\n            \"liked_users\": [],\n            \"is_liked\": false\n        },\n        {\n            \"id\": 13,\n            \"title\": \"Test Title 8\",\n            \"description\": \"Lorem ipsum dolor sit amet, cras purus ridiculus morbi, nunc at nam et fermentum nam, posuere suspendisse in nulla aliquam, etiam laudantium fermentum. Quisque nunc luctus sit, tincidunt at sed lectus luctus, integer at, ipsum fusce sit id luctus dolor in.\",\n            \"created_by\": \"root\",\n            \"created_at\": \"2020-04-17 20:22:25\",\n            \"tags\": [\n                \"tag_3\",\n                \"tag_4\"\n            ],\n            \"images\": [\n                \"/media/images/post_images/light_bulb_drawing_vector_130581_1920x1080_EwJKehP.jpg\"\n            ],\n            \"likes_no\": null,\n            \"liked_users\": [],\n            \"is_liked\": false\n        },\n        {\n            \"id\": 14,\n            \"title\": \"Test Title 9\",\n            \"description\": \"Lorem ipsum dolor sit amet, cras purus ridiculus morbi, nunc at nam et fermentum nam, posuere suspendisse in nulla aliquam, etiam laudantium fermentum. Quisque nunc luctus sit, tincidunt at sed lectus luctus, integer at, ipsum fusce sit id luctus dolor in.\",\n            \"created_by\": \"root\",\n            \"created_at\": \"2020-04-17 20:22:59\",\n            \"tags\": [\n                \"tag_2\",\n                \"tag_3\"\n            ],\n            \"images\": [\n                \"/media/images/post_images/buddha_buddhism_meditation_147451_1920x1080_8LipPpo.jpg\"\n            ],\n            \"likes_no\": null,\n            \"liked_users\": [],\n            \"is_liked\": false\n        },\n        {\n            \"id\": 15,\n            \"title\": \"Test Title 10\",\n            \"description\": \"Lorem ipsum dolor sit amet, cras purus ridiculus morbi, nunc at nam et fermentum nam, posuere suspendisse in nulla aliquam, etiam laudantium fermentum. Quisque nunc luctus sit, tincidunt at sed lectus luctus, integer at, ipsum fusce sit id luctus dolor in.\",\n            \"created_by\": \"root\",\n            \"created_at\": \"2020-04-17 20:23:35\",\n            \"tags\": [\n                \"tag_8\",\n                \"tag_9\"\n            ],\n            \"images\": [\n                \"/media/images/post_images/buddha_buddhism_meditation_147451_1920x1080_EmYVHEZ.jpg\"\n            ],\n            \"likes_no\": null,\n            \"liked_users\": [],\n            \"is_liked\": false\n        },\n        {\n            \"id\": 7,\n            \"title\": \"Test Title 2\",\n            \"description\": \"Lorem ipsum dolor sit amet, cras purus ridiculus morbi, nunc at nam et fermentum nam, posuere suspendisse in nulla aliquam, etiam laudantium fermentum. Quisque nunc luctus sit, tincidunt at sed lectus luctus, integer at, ipsum fusce sit id luctus dolor in.\",\n            \"created_by\": \"root\",\n            \"created_at\": \"2020-04-17 20:18:18\",\n            \"tags\": [\n                \"tag_1\",\n                \"tag_2\",\n                \"tag_4\"\n            ],\n            \"images\": [\n                \"/media/images/post_images/buddha_buddhism_meditation_147451_1920x1080_3sMIEkr.jpg\"\n            ],\n            \"likes_no\": null,\n            \"liked_users\": [],\n            \"is_liked\": true\n        },\n        {\n            \"id\": 9,\n            \"title\": \"Test Title 4\",\n            \"description\": \"Lorem ipsum dolor sit amet, cras purus ridiculus morbi, nunc at nam et fermentum nam, posuere suspendisse in nulla aliquam, etiam laudantium fermentum. Quisque nunc luctus sit, tincidunt at sed lectus luctus, integer at, ipsum fusce sit id luctus dolor in.\",\n            \"created_by\": \"root\",\n            \"created_at\": \"2020-04-17 20:19:37\",\n            \"tags\": [\n                \"tag_1\",\n                \"tag_3\",\n                \"tag_6\"\n            ],\n            \"images\": [\n                \"/media/images/post_images/inscription_lighting_neon_118059_1920x1080_0zKxhU4.jpg\"\n            ],\n            \"likes_no\": null,\n            \"liked_users\": [],\n            \"is_liked\": true\n        }\n    ]\n}"
+						},
+						{
+							"name": "Invalid Token Response",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Token  ",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://127.0.0.1:8000/post/all/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"post",
+										"all",
+										""
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sat, 18 Apr 2020 11:17:43 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.7.5"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "WWW-Authenticate",
+									"value": "Token"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "59"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"detail\": \"Invalid token header. No credentials provided.\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Like/Unlike Post",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token 85f41bf6350f4409c25c05d2cffb955e638e6e96",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/post/like/9/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"post",
+								"like",
+								"9",
+								""
+							]
+						},
+						"description": "API for liking/unliking the posts. This API is only for users, 'admins are restricted from liking or unliking the posts'.\n\nNote: Please add the 'user token' as the 'Autherization Header'"
+					},
+					"response": [
+						{
+							"name": "post unlike response(success)",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Token 85f41bf6350f4409c25c05d2cffb955e638e6e96",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/post/like/9/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"post",
+										"like",
+										"9",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sat, 18 Apr 2020 11:22:01 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.7.5"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "64"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"return\": true,\n    \"message\": \"suman successfully un-liked the post\"\n}"
+						},
+						{
+							"name": "post like response(success)",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Token 85f41bf6350f4409c25c05d2cffb955e638e6e96",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/post/like/9/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"post",
+										"like",
+										"9",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sat, 18 Apr 2020 11:18:50 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.7.5"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "61"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"return\": true,\n    \"message\": \"suman successfully liked the post\"\n}"
+						},
+						{
+							"name": "Invalid post id response",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Token 85f41bf6350f4409c25c05d2cffb955e638e6e96",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/post/like/28/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"post",
+										"like",
+										"28",
+										""
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sat, 18 Apr 2020 11:24:44 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.7.5"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "55"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"return\": false,\n    \"message\": \"No posts with id: 28 found\"\n}"
+						},
+						{
+							"name": "admin user like/unlike response(forbidden)",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Token 4df1645ca5185da67b14d439a0e3594ce44dc503",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/post/like/9/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"post",
+										"like",
+										"9",
+										""
+									]
+								}
+							},
+							"status": "Forbidden",
+							"code": 403,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sat, 18 Apr 2020 11:23:43 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.7.5"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "76"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"return\": false,\n    \"message\": \"Admin user is not permitted to like/unlike post\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Liked User List (admin only)",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token \t4df1645ca5185da67b14d439a0e3594ce44dc503",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/post/liked_users/9/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"post",
+								"liked_users",
+								"9",
+								""
+							]
+						},
+						"description": "This API returns all the users who have liked a particular post.\n\nNote: Please add the 'user token' as the 'Autherization Header'"
+					},
+					"response": [
+						{
+							"name": "Invalid post id response",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Token 4df1645ca5185da67b14d439a0e3594ce44dc503",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://127.0.0.1:8000/post/liked_users/45/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"post",
+										"liked_users",
+										"45",
+										""
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sat, 18 Apr 2020 11:19:24 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.7.5"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "55"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"return\": false,\n    \"message\": \"No posts with id: 45 found\"\n}"
+						},
+						{
+							"name": "success response",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Token \t4df1645ca5185da67b14d439a0e3594ce44dc503",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://127.0.0.1:8000/post/liked_users/9/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"post",
+										"liked_users",
+										"9",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sat, 18 Apr 2020 11:21:08 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.7.5"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "346"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"return\": true,\n    \"message\": \"Successfully fetched the users who like the post: 9\",\n    \"data\": [\n        {\n            \"user\": {\n                \"username\": \"suman\",\n                \"first_name\": \"Suman\",\n                \"last_name\": \"Mahi\",\n                \"email\": \"suman@navigant.com\"\n            },\n            \"liked_at\": \"2020-04-18 11:18:50\"\n        },\n        {\n            \"user\": {\n                \"username\": \"hugo\",\n                \"first_name\": \"Hugo\",\n                \"last_name\": \"Code\",\n                \"email\": \"noul@gmail.com\"\n            },\n            \"liked_at\": \"2020-04-17 20:29:01\"\n        }\n    ]\n}"
+						},
+						{
+							"name": "Invalid token response",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Token 4df1645ca5185da67b14d439a0e3594ce44dc50",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://127.0.0.1:8000/post/liked_users/45/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"post",
+										"liked_users",
+										"45",
+										""
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sat, 18 Apr 2020 11:20:03 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.7.5"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "WWW-Authenticate",
+									"value": "Token"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "27"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"detail\": \"Invalid token.\"\n}"
+						}
+					]
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
