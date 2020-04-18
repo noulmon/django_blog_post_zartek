@@ -11,11 +11,11 @@ The _admin user_ has the privilege to view the list of all users who have liked 
 
 ### Follow the steps to _run the application_:
 
-1. Install all the required required packaged(python modules):
+1. Install all the required packages(python modules):
 
     ```pip install -r requirements.txt```
 
-2. Migrate all models to the database(Assuming that you've already setup the Database- PostgreSQL preferred)
+2. Migrate all the models to the database(Assuming that you've already setup the Database- PostgreSQL preferred)
  
     ```python manage.py migrate```
     
@@ -23,13 +23,13 @@ The _admin user_ has the privilege to view the list of all users who have liked 
 
     ```python manage.py runserver```
     
-    If the steps are followed correctly, you're server will be up and running.
+    If the steps are followed correctly, the server will be up and running.
  
  4. To gather all static files:
    
     ```python manage.py collectstatic```
 
- 4. To log into admin panel, we have to create a superuser:
+ 4. To login to admin panel, we have to create a superuser:
  
     ```python manage.py createsuperuser```
     
@@ -37,11 +37,11 @@ The _admin user_ has the privilege to view the list of all users who have liked 
     
         http://127.0.0.1:8000/admin/
     
-    On logging into the admin panel, admin users can:
+    On signing in to the admin panel, admin users can:
     ```1. Add users```
     ```2. Add posts```
     
-    Don't forget to add **_AUTH TOKENS_** for each users you create, in the **TOKENS** section.
+    Don't forget to add **_AUTH TOKENS_** for each user you create, from the **TOKENS** section.
 
 ## API Documentation:
    - API Documentation are in: ``\docs\api_docs\blog_post_api_doc.json``
