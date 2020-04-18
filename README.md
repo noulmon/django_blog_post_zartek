@@ -44,7 +44,7 @@ The _admin user_ has the privilege to view the list of all users who have liked 
    - Browsable Documentation: `https://documenter.getpostman.com/view/6826654/Szf55ACK` 
 
 ### API Endpoints:
-(**_`Note: Please add the 'user token' as the 'Authorization Header for all APIs'`_**)
+(**_`Note: Please add the 'user token' as the 'Authorization Header' for all APIs`_**)
 1. ```/post/all/``` list of all posts based on the user likes.
 
 2. ```/post/like/<int:pk>/``` like/unlike a post.
