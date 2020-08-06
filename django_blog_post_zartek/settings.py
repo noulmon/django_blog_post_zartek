@@ -89,7 +89,7 @@ WSGI_APPLICATION = 'django_blog_post_zartek.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
-POSGRESQL = True
+POSGRESQL = False
 if POSGRESQL:
     DATABASES = {
         'default': {
