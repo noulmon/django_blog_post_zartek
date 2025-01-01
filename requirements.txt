@@ -7,7 +7,7 @@ django-vote==2.1.7
 djangorestframework==3.11.2
 greencache==1.0.0
 htmq==1.0.0
-idna==2.9
+idna==3.7
 numpy==1.18.2
 pandas==1.0.3
 Pillow==7.1.1
