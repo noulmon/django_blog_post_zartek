@@ -19,7 +19,7 @@ redlib==1.5.7
 requests==2.32.2
 six==1.14.0
 sqlparse==0.3.1
-urllib3==1.26.5
+urllib3==1.26.19
 vote==1.0.2
 zope.interface==5.1.0
 
